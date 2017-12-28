@@ -8,7 +8,7 @@ import { CursosService } from './cursos.service';
 })
 export class CursosComponent {
   nomePortal: string;
-  cursos : string[];
+  cursos: string[];
 
   constructor(public cursosService: CursosService) {
     this.nomePortal = 'http://www.google.com.br';
