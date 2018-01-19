@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
   url = 'http://www.google.com';
-  cursoAngular = false;
-  urlImagem = 'http://nbtravelguide.com/wp-content/uploads/2014/05/nature-400x200.jpg';
-  valorAtual = '';
-  valorSalvo = '';
-  isMouseOver = false;
+  cursoAngular: boolean = false;
+  urlImagem: string = 'http://nbtravelguide.com/wp-content/uploads/2014/05/nature-400x200.jpg';
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  isMouseOver: boolean = false;
+  nomeDoCurso: string = 'Angular';
+  valorInicial: number = 15;
 
   getValor() {
     return 10;
