@@ -1,22 +1,32 @@
-<section>
-  <article>
-    <h3>Two-Way Data binding</h3>
+<section class="two-way-binding">
+    <article>
+        <h3>Two-way data binding</h3>
+        <div>
+          
+          <input type="text" 
+            [value]="nome"
+            (input)="nome = $event.target.value"
+          />
 
-    <div>
-      <input type="text" [value]="nome" (input)="nome=$event.target.value" class="form-control">
-      <!-- 1º exemplo -->
-      <input type="text" [ngModel]="nome" (ngModelChange)="nome=$event" class="form-control">
-      <!-- 2º exemplo -->
-      <input type="text" [(ngModel)]="nome" class="form-control">
-      <!-- 3º exemplo - Utilizando Two-Way -->
-      <p>Você digitou o nome {{ nome }}</p>
-    </div>
+          <input type="text" 
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+          />
 
-    <div>
-      <p>Meu nome é: {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade!</p>
-      <br>
-      <input type="text" [(ngModel)]="pessoa.nome" class="form-control">
-      <input type="text" [(ngModel)]="pessoa.idade" class="form-control">
-    </div>
-  </article>
+          <input type="text" [(ngModel)]="nome">
+
+          <input type="text" bindon-ngModel="nome">
+
+          <p>Você digitou: {{ nome }}</p>
+        </div>
+
+        <div>
+
+          <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+
+          <input type="text" [(ngModel)]="pessoa.nome">
+          <input type="text" [(ngModel)]="pessoa.idade">
+
+        </div>
+    </article>
 </section>
